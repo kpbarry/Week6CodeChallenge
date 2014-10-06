@@ -13,7 +13,7 @@ namespace Week6CodeChallenge.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return PartialView();
         }
 
     }

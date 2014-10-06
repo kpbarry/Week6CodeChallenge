@@ -13,13 +13,12 @@ namespace Week6CodeChallenge.Controllers
 
         public ActionResult Index()
         {
-            if (Request.IsAjaxRequest()) {
-                return PartialView();
-            }
-            else 
-            {
-                return View();
-            }
+            return PartialView();
+        }
+        [HttpGet]
+        public ActionResult HomePage()
+        {
+            return PartialView();
         }
 
     }

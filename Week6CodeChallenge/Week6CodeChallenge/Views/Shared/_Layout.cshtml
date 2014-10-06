@@ -9,22 +9,41 @@
 </head>
 <body>
     <header>
-        <img src="http://cdn-img.easylogo.cn/gif/51/51700.gif" />
+
+        <div style="border:1px solid black">
+
+            <div style="width: 49%; display:inline-block; border: 1px dashed black">
+                <img src="http://cdn-img.easylogo.cn/gif/51/51700.gif" />
+            </div>
+            <div class="navLinks" style="text-align:right; width: 50%; display:inline-block; ">
+                <span class="ajax-get" data-url="/Home/Index">HOME</span>  &nbsp; |   &nbsp;
+                <span class="ajax-get" data-url="/About/Index">ABOUT</span>  &nbsp; |   &nbsp;
+                <span class="ajax-get" data-url="/Work/Index">WORK</span>  &nbsp; |   &nbsp;
+                <span class="ajax-get" data-url="/Home/Careers">CAREERS</span>  &nbsp; |   &nbsp;
+                <span class="ajax-get" data-url="/Contact/Index">CONTACT</span>
+
+            </div>
+        </div>
     </header>
-    <section id="container">
+    <div id="content">
         @RenderBody()
-    </section>
+    </div>
+
+    <footer>
+        <br />
+        <div style="width: 49%; display:inline-block;">
+            &copy; 2014 Kevin Barry
+        </div>
+        <div class="navLinks" style="text-align:right; width: 50%; display:inline-block; ">
+            <span class="ajax-get" data-url="/Home/Index">HOME</span>  &nbsp; |   &nbsp;
+            <span class="ajax-get" data-url="/About/Index">ABOUT</span>  &nbsp; |   &nbsp;
+            <span class="ajax-get" data-url="/Work/Index">WORK</span>  &nbsp; |   &nbsp;
+            <span class="ajax-get" data-url="/Home/Careers">CAREERS</span>  &nbsp; |   &nbsp;
+            <span class="ajax-get" data-url="/Contact/Index">CONTACT</span>
+        </div>
+
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
-    <footer>
-        <ul>
-            <li>© 2014 Kevin Barry</li>
-            <li class="ajax-get" data-url="@Url.Action("Index", "Home")">Home</li>
-            <li class="ajax-get" data-url="@Url.Action("Index", "About")">About</li>
-            <li class="ajax-get" data-url="@Url.Action("Index", "Work")">Work</li>
-            <li class="ajax-get" data-url="@Url.Action("Index", "Careers")">Careers</li>
-            <li class="ajax-get" data-url="@Url.Action("Index", "Contact")">Contact</li>
-        </ul>
-    </footer>
 </body>
 </html>
