@@ -1,21 +1,21 @@
-﻿//Load in view for /Home/HomePage to site
-$(document).ready(function () {
+﻿$(document).ready(function () {
+    //Load in view for /Home/HomePage to site
     $.get('/Home/HomePage', function (data) {
         $('#content').html(data);
     });
-});
 
-//Ajax get for navigation links
-$('.navLinks').on('click', '.ajax-get', function () {
-    $.get($(this).data('url'), function (data) {
-        $('#content').html(data);
+    //Ajax get for navigation links
+    $('.navLinks').on('click', '.ajax-get', function () {
+        $.get($(this).data('url'), function (data) {
+            $('#content').html(data);
+        });
     });
-});
 
-//Ajax get for changing tabs
-$('.tabsList').on('click', '.tabid', function () {
-    $.get($(this).data('url'), function (data) {
-        $('#tabContent').html(data);
+    //Ajax get for changing tabs
+    $('.tabsList').on('click', '.tabid', function () {
+        $.get($(this).data('url'), function (data) {
+            $('#tabContent').html(data);
+        });
     });
 });
 
